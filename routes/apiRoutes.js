@@ -5,17 +5,40 @@ module.exports = (app) => {
         db.Workout.find({})
         .then(results=>{
             res.json(results);
+        })
+        .catch(err=>{
+            console.log(err)
         });
     });
 
     app.put('/api/workouts/:id', (req, res)=>{
-        console.log("put, /api/workouts"+ req.params.id);
-        console.log(req.body);
+        db.Workout.findById(req.params.id)
+        .then(result=>{
+            const dbExerciseArray = result.exercises;
+            dbExerciseArray.push(req.body);
+            const objToPush = {
+                day: new Date(new Date().setDate(new Date().getDate() - 2)),
+                exercises: dbExerciseArray
+            };
+            db.Workout.findByIdAndUpdate(req.params.id, objToPush, {new: true})
+            .then(result=>{
+                console.log(result);
+                res.json(result);
+            })
+            .catch(err=>{
+                console.log(err);
+            });
+        });
     });
 
     app.post('/api/workouts', (req, res)=>{
-        console.log("post, /api/workouts");
-        console.log(req.body);
+        db.Workout.create({})
+        .then(result=>{
+            res.json(result);
+        })
+        .catch(err=>{
+            console.log(err)
+        });
     });
 
     app.get('/api/workouts/range', (req, res)=>{
