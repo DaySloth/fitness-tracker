@@ -17,7 +17,7 @@ module.exports = (app) => {
             const dbExerciseArray = result.exercises;
             dbExerciseArray.push(req.body);
             const objToPush = {
-                day: new Date(new Date().setDate(new Date().getDate() - 2)),
+                day: Date.now(),
                 exercises: dbExerciseArray
             };
             db.Workout.findByIdAndUpdate(req.params.id, objToPush, {new: true})
