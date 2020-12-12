@@ -1,7 +1,11 @@
+const db = require("../models");
+
 module.exports = (app) => {
     app.get('/api/workouts', (req, res)=>{
-        console.log("get, /api/workouts");
-        console.log(req.body);
+        db.Workout.find({})
+        .then(results=>{
+            res.json(results);
+        });
     });
 
     app.put('/api/workouts/:id', (req, res)=>{
@@ -15,7 +19,9 @@ module.exports = (app) => {
     });
 
     app.get('/api/workouts/range', (req, res)=>{
-        console.log("get, /api/workouts/range");
-        console.log(req.body);
+        db.Workout.find({})
+        .then(results=>{
+            res.json(results);
+        });
     });
 };
