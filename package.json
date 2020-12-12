@@ -2,10 +2,10 @@
   "name": "mongoose_skeleton",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
+    "start": "npm seed && node app.js",
     "watch": "nodemon app.js",
     "seed": "node seeders/seed.js"
   },
