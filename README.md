@@ -4,7 +4,7 @@
 
 ![MIT License](https://img.shields.io/badge/License-MIT-green)
 
-![Image of Application](./img/burger-landing.PNG)
+![Image of Application](https://i.imgur.com/e2x5Dsb.png)
 
 ## Description 
 
