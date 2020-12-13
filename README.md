@@ -8,11 +8,13 @@
 
 ## Description 
 
-This application is build for those who like to remain active, and keep a record of that. Once you load the web app up it will display your previous workout, and give you the option to either continue that workout or to start a new one.
+This application is build for those who like to remain active, and keep a record of that. Once you load the web app up it will display your previous workout, and give you the option to either continue that workout or to start a new one. After submitting your workout you can view your wonderful progress on the dashboard. Keep up the great work.
 
 ## Usage
 
-You can visit the [Link](https://allister-fitness-tracker.herokuapp.com/) provided and this will take you to the Heroku deployed application. Since this is deployed on Heroku it utilizes JawsDB through Heroku to store the data. You will simpily put in the burger you would like to order and submit it. Afterwards it will display in the ordered category with the option for you eat the order. If you eat the order it will update the SQL database and move the order to the eaten category. Once it does this it will give the option to throw the trash away. If you choose this it will delete the burger from the SQL database.
+You can visit the [Link](https://allister-fitness-tracker.herokuapp.com/) provided and this will take you to the Heroku deployed application. This is deployed on Heroku it utilizes Mongo DB to store the data. You will simpily continue your previous workout or start a new one, this will take you to choose a type of workout. Once you select one it will give you fields to fill out and submit. Once submitted it will make an entry into the database and update the last recorded workout.
+
+You also have options to view your stats of all previously recorded workouts by visiting the stats page.
 
 ## Credits
 
